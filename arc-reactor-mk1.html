@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Arc Reactor Mk I — Spec Sheet</title>
+<style>
+  :root{ --bg:#0c0a07; --panel:#161109; --line:#2c2114; --ink:#f3ecde; --dim:#9a8c75; --acc:#7fd4ff; --warm:#ffb347; }
+  *{box-sizing:border-box;margin:0}
+  body{font-family:"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;
+    display:grid;grid-template-columns:1fr 1fr;gap:0}
+  @media(max-width:760px){body{grid-template-columns:1fr}}
+  .left{padding:46px 36px}
+  .tag{color:var(--warm);font-size:12px;letter-spacing:.26em;text-transform:uppercase}
+  h1{font-size:34px;margin:12px 0 18px}
+  p{color:var(--dim);line-height:1.7;font-size:15px;max-width:46ch}
+  dl{margin-top:26px;display:grid;grid-template-columns:auto 1fr;gap:10px 18px;font-size:14px}
+  dt{color:var(--dim)}dd{color:var(--ink);text-align:right}
+  .right{display:grid;place-items:center;background:radial-gradient(circle at 50% 50%,#10233022,transparent 70%);border-left:1px solid var(--line)}
+  .reactor{width:240px;height:240px;border-radius:50%;position:relative;display:grid;place-items:center}
+  .ring{position:absolute;border-radius:50%;border:2px solid #1d3a48}
+  .r1{inset:0}.r2{inset:30px}.r3{inset:64px}
+  .core{width:84px;height:84px;border-radius:50%;background:radial-gradient(circle,#dffbff,#7fd4ff 55%,#1d6fa0);
+    box-shadow:0 0 50px 8px rgba(127,212,255,.6);animation:pulse 3s ease-in-out infinite}
+  .coil{position:absolute;width:14px;height:14px;background:#9be3ff;border-radius:3px;box-shadow:0 0 12px #7fd4ff}
+  @keyframes pulse{50%{box-shadow:0 0 70px 16px rgba(127,212,255,.85)}}
+  footer{grid-column:1/-1;border-top:1px solid var(--line);padding:16px 36px;color:var(--dim);font-size:11px}
+</style>
+</head>
+<body>
+  <div class="left">
+    <div class="tag">Advanced Projects · Sector 16</div>
+    <h1>Arc Reactor — Mk I</h1>
+    <p>Self-sustaining palladium-core fusion cell. Prototype recovered and reverse-engineered for scale-up. Note: miniaturization remains unsolved at this facility — see attached field unit for reference geometry.</p>
+    <dl>
+      <dt>Output</dt><dd>8.0 GJ / s (sustained)</dd>
+      <dt>Core</dt><dd>palladium ring, 6-segment</dd>
+      <dt>Diameter</dt><dd>1.2 m (lab) / 0.07 m (field)</dd>
+      <dt>Efficiency</dt><dd>99.4%</dd>
+      <dt>Status</dt><dd>scale-up — BLOCKED</dd>
+      <dt>Lead</dt><dd>O. Stane</dd>
+    </dl>
+  </div>
+  <div class="right">
+    <div class="reactor">
+      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+      <div class="core"></div>
+    </div>
+  </div>
+  <footer>arc-reactor-mk1 · confidential spec sheet · "Tony, this is the only thing standing between us and the future."</footer>
+<script>
+  const r=document.querySelector('.reactor');
+  for(let i=0;i<10;i++){const c=document.createElement('div');c.className='coil';
+    const a=i/10*2*Math.PI;c.style.left=(120+Math.cos(a)*98-7)+'px';c.style.top=(120+Math.sin(a)*98-7)+'px';r.appendChild(c);}
+</script>
+</body>
+</html>

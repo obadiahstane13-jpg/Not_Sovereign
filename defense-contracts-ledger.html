@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Defense Contracts — Ledger</title>
+<style>
+  :root{ --bg:#100d09; --panel:#181410; --line:#2c241a; --ink:#f0e9dd; --dim:#9a8c75; --acc:#ffb347; }
+  *{box-sizing:border-box;margin:0}
+  body{font-family:ui-monospace,Consolas,monospace;background:var(--bg);color:var(--ink);padding:28px}
+  h1{font-size:17px;letter-spacing:.08em;margin-bottom:4px}h1 b{color:var(--acc)}
+  p.sub{color:var(--dim);font-size:12px;margin-bottom:20px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left}
+  th{color:var(--dim);font-weight:400;text-transform:uppercase;font-size:11px;letter-spacing:.08em}
+  td.val{text-align:right;color:var(--acc)}
+  .flag{color:#ff7a7a}.green{color:#7CFC9B}
+  tfoot td{border-top:2px solid var(--line);font-weight:700}
+  footer{margin-top:18px;color:var(--dim);font-size:11px}
+</style>
+</head>
+<body>
+  <h1>DEFENSE CONTRACTS // <b>LEDGER</b></h1>
+  <p class="sub">active &amp; pending awards · figures in USD millions · internal</p>
+  <table>
+    <thead><tr><th>contract</th><th>counterparty</th><th>region</th><th>status</th><th class="val">value</th></tr></thead>
+    <tbody>
+      <tr><td>JERICHO-2024</td><td>US DoD</td><td>NA</td><td class="green">active</td><td class="val">2,400</td></tr>
+      <tr><td>SHIELDWALL</td><td>NATO joint</td><td>EU</td><td class="green">active</td><td class="val">1,180</td></tr>
+      <tr><td>SANDSTORM</td><td>(redacted)</td><td>ME</td><td class="flag">unrouted</td><td class="val">640</td></tr>
+      <tr><td>FALCONRY</td><td>RAF procurement</td><td>UK</td><td class="green">active</td><td class="val">510</td></tr>
+      <tr><td>NIGHTLEDGER</td><td>private — Ten Rings</td><td class="flag">—</td><td class="flag">off-book</td><td class="val">??</td></tr>
+      <tr><td>POWERGRID-X</td><td>Energy Dept</td><td>NA</td><td>pending</td><td class="val">220</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="4">disclosed total</td><td class="val">4,310</td></tr></tfoot>
+  </table>
+  <footer>ledger sync 02:51 · "NIGHTLEDGER" entries excluded from board pack on instruction · O.S.</footer>
+</body>
+</html>
